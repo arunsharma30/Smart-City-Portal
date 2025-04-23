@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grievance – Smart Dholera</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0e0e0e;
+      color: #fff;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2rem;
+    }
+    .grievance-form {
+      max-width: 650px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(255, 65, 108, 0.2);
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 1rem;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      box-shadow: 0 0 10px #ff416c;
+    }
+    .btn {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 15px rgba(255, 65, 108, 0.4);
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+      box-shadow: 0 0 25px rgba(255, 65, 108, 0.8);
+    }
+    .success-msg {
+      text-align: center;
+      margin-top: 2rem;
+      color: #ffb6c1;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>📨 Grievance Submission</h1>
+  <form class="grievance-form" onsubmit="event.preventDefault(); document.getElementById('success').style.display = 'block';">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" placeholder="Grievance subject" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Write your grievance..." required></textarea>
+
+    <button type="submit" class="btn">Submit Grievance</button>
+  </form>
+
+  <div class="success-msg" id="success">
+    ✅ Grievance submitted! You will be contacted shortly.
+  </div>
+</body>
+</html>

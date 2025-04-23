@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Dholera – Empowering Tomorrow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    header {
+      height: 100vh;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(49, 0, 75, 0.8)), url('https://images.unsplash.com/photo-1528901166007-3784c7dd3653?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 4rem;
+      background: linear-gradient(to right, #00ffff, #8a2be2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #0ff; }
+      100% { text-shadow: 0 0 20px #8a2be2; }
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 1rem;
+    }
+    .btns {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      background: linear-gradient(135deg, #00ffff, #8a2be2);
+      color: #000;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    }
+    .btn:hover {
+      transform: scale(1.1) rotate(1deg);
+      background: linear-gradient(135deg, #8a2be2, #00ffff);
+      color: #fff;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    }
+    .section {
+      padding: 4rem 2rem;
+      background: #121212;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      color: #00ffff;
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: #00ffff;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    }
+    .card a {
+      display: block;
+      color: inherit;
+    }
+    .footer {
+      background: #0a0a0a;
+      padding: 2rem;
+      text-align: center;
+      color: #777;
+    }
+    .footer a {
+      color: #777;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #fff;
+    }
+    input[type="text"] {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      outline: none;
+      font-size: 1rem;
+      box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+    input[type="text"]:focus {
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Los Santos</h1>
+    <p>A city of the future, built for you.</p>
+    <div class="btns">
+      <a href="http://127.0.0.1:5500/paybills.html" class="btn">💳 Pay Bills</a>
+      <a href="http://127.0.0.1:5500/report-issue.html" class="btn">🚨 Report Issue</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>🚀 City Services</h2>
+    <div class="grid">
+      <div class="card"><a href="http://127.0.0.1:5500/paybills.html">💡 Pay Bills</a></div>
+      <div class="card"><a href="http://127.0.0.1:5500/report-issue.html">🧾 Report Issue</a></div>
+      <div class="card"><a href="http://127.0.0.1:5500/transport.html">🚌 Transport Status</a></div>
+      <div class="card"><a href="http://127.0.0.1:5500/grievance.html">📢 Grievances</a></div>
+      <div class="card"><a href="http://127.0.0.1:5500/health-services.html">🏥 Health Services</a></div>
+      <div class="card"><a href="http://127.0.0.1:5500/education.html">📚 Education</a></div>
+      <div class="card"><a href="http://127.0.0.1:5500/tourism.html">🚌 Tourism</a></div>
+      
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>📊 Live City Insights</h2>
+    <div class="grid">
+      <div class="card">🚦 Traffic Level: Moderate</div>
+      <div class="card">🌬️ Air Quality: Good</div>
+      <div class="card">⚡ Energy Use: 76%</div>
+      <div class="card">🚌 Transport Use: 68%</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🤝 Share Your Ideas</h2>
+    <input type="text" placeholder="Your idea..." style="padding: 1rem; border-radius: 30px; width: 80%; max-width: 500px; border: none; margin-top: 1rem;">
+    <div class="btns" style="margin-top: 1.5rem;">
+      <button class="btn">Submit Idea</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Coming Soon...</h2>
+    <h2>📱 Los Santos in Your Pocket</h2>
+    <p style="color: #aaa; margin-top: 1rem;">Download our app to access services anytime, anywhere.</p>
+    <div class="btns" style="margin-top: 1.5rem;">
+      <button class="btn">Download App</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Los Santos. All rights reserved.</p>
+    <div>
+      <a href="#">Privacy Policy</a>|
+      <a href="#">Terms</a>|
+      <a href="#">Open Data</a>
+    </div>
+  </footer>
+</body>
+</html>

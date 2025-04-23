@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Issue – Smart Dholera</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #ff00ff, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2rem;
+    }
+    .issue-form {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-size: 1rem;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #ff00ff;
+    }
+    .btn {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, #ff00ff, #00ffff);
+      color: #000;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #00ffff, #ff00ff);
+      color: #fff;
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
+    }
+    .success-msg {
+      text-align: center;
+      margin-top: 2rem;
+      color: #00ffcc;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>📢 Report an Issue</h1>
+  <form class="issue-form" onsubmit="event.preventDefault(); document.getElementById('success').style.display = 'block';">
+    <label for="category">Issue Category</label>
+    <select id="category" required>
+      <option value="">-- Select --</option>
+      <option value="water-leak">Water Leak</option>
+      <option value="power-outage">Power Outage</option>
+      <option value="road-damage">Road Damage</option>
+      <option value="public-safety">Public Safety</option>
+      <option value="internet-issue">Internet Issue</option>
+    </select>
+
+    <label for="location">Location</label>
+    <input type="text" id="location" placeholder="Enter the address or area" required />
+
+    <label for="details">Details</label>
+    <textarea id="details" rows="5" placeholder="Describe the issue in detail..." required></textarea>
+
+    <button type="submit" class="btn">Submit Report</button>
+  </form>
+
+  <div class="success-msg" id="success">
+    ✅ Issue Reported Successfully! Our team will look into it ASAP.
+  </div>
+</body>
+</html>

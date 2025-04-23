@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Santos Tourism</title>
+    <style>
+        /* Color Scheme */
+        :root {
+            --primary-color: #0077B6;
+            --secondary-color: #00B4D8;
+            --tertiary-color: #90E0EF;
+            --quaternary-color: #CAF0F8;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--quaternary-color);
+            color: #000;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1em;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--tertiary-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2em;
+            background-color: var(--secondary-color);
+            color: var(--quaternary-color);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .section {
+            padding: 2em;
+        }
+
+        .destination {
+            margin-bottom: 2em;
+            background-color: var(--tertiary-color);
+            padding: 1em;
+            border-radius: 8px;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .destination:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        .destination img {
+            width: 100%;
+            max-width: 300px;
+            margin: 0.5em;
+            border-radius: 8px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination img:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .why-visit {
+            background-color: var(--quaternary-color);
+            padding: 2em;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1em;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Los Santos</h1>
+        <p>Explore the Vibrant and Diverse Wonders of Our City</p>
+        <p>Your gateway to unforgettable experiences.</p>
+    </section>
+
+    <section id="destinations" class="section destinations">
+        <h2>Popular Destinations</h2>
+        
+        <div class="destination">
+            <h3>Party District</h3>
+            <p>Experience the vibrant nightlife, exclusive clubs, and electrifying events that define Los Santos' Party District.</p>
+            <div class="gallery">
+                <a href="https://ibb.co/39qx4WCX"><img src="https://i.ibb.co/wFXnBCzH/Gemini-Generated-Image-oe5tluoe5tluoe5t.jpg" alt="Gemini-Generated-Image-oe5tluoe5tluoe5t" border="0"></a>
+                <a href="https://ibb.co/HfskgStJ"><img src="https://i.ibb.co/5gyfc0r7/Gemini-Generated-Image-pge189pge189pge1.jpg" alt="Gemini-Generated-Image-pge189pge189pge1" border="0"></a> 
+            </div>
+        </div>
+        
+        <div class="destination">
+            <h3>The Historic Fort</h3>
+            <p>Discover the rich history of Los Santos at our iconic fort, a timeless symbol of the city's heritage.</p>
+            <div class="gallery">
+                <a href="https://ibb.co/Sw3fcSXN"><img src="https://i.ibb.co/4RV12kZW/Gemini-Generated-Image-p4hkamp4hkamp4hk.jpg" alt="Gemini-Generated-Image-p4hkamp4hkamp4hk" border="0"></a>
+                <a href="https://ibb.co/zTJtRD7x"><img src="https://i.ibb.co/21NptHsh/Gemini-Generated-Image-t7wa6vt7wa6vt7wa.jpg" alt="Gemini-Generated-Image-t7wa6vt7wa6vt7wa" border="0"></a>
+            </div>
+        </div>
+        
+        <div class="destination">
+            <h3>Sunny Beaches</h3>
+            <p>Relax on pristine sandy shores or dive into thrilling water sports at our breathtaking beaches.</p>
+            <div class="gallery">
+                <a href="https://ibb.co/k28125P6"><img src="https://i.ibb.co/GQ2TQnr3/Gemini-Generated-Image-qzhgxrqzhgxrqzhg.jpg" alt="Gemini-Generated-Image-qzhgxrqzhgxrqzhg" border="0"></a>
+              
+            </div>
+        </div>
+        
+        <div class="destination">
+            <h3>Downtown</h3>
+            <p>Explore the bustling heart of Los Santos, filled with shopping, fine dining, and cultural landmarks.</p>
+            <div class="gallery">
+                <a href="https://ibb.co/YFT7CMcx"><img src="https://i.ibb.co/fzGYg5ks/Gemini-Generated-Image-cykaobcykaobcyka.jpg" alt="Gemini-Generated-Image-cykaobcykaobcyka" border="0"></a>
+                <a href="https://ibb.co/kgJfTR47"><img src="https://i.ibb.co/wN7Xq9Sk/Gemini-Generated-Image-hfosk1hfosk1hfos.jpg" alt="Gemini-Generated-Image-hfosk1hfosk1hfos" border="0"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-visit">
+        <h2>Why Visit Los Santos?</h2>
+        <p><strong>Cultural Diversity:</strong> A melting pot of traditions and modernity.</p>
+        <p><strong>Scenic Beauty:</strong> From beaches to historic landmarks.</p>
+        <p><strong>Endless Entertainment:</strong> Vibrant nightlife and rich heritage.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Los Santos Tourism</p>
+        <p>Contact Us: info@lsttourism.com | +1 234 567 8910</p>
+        <p>Follow Us: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+    </footer>
+
+</body>
+</html>

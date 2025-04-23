@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Santos</title>
+  <!-- Cyberpunk font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      overflow-x: hidden;
+      position: relative;
+      color: #fff;
+    }
+    /* Background Video */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Dark overlay to improve contrast */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    /* Header with Neon Effect */
+    header {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 5em;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #00FFFF;
+      /* Neon glow effect */
+      text-shadow: 
+        0 0 10px #00FFFF,
+        0 0 20px #00FFFF,
+        0 0 30px #00FFFF;
+      /* Floating animation */
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    /* Main content container */
+    .container {
+      max-width: 1200px;
+      margin: 150px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Section Styles */
+    .section {
+      margin-bottom: 50px;
+    }
+    .section h2 {
+      font-size: 2.5em;
+      color: #FFBF00;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(255,191,0,0.9);
+    }
+    .section p {
+      font-size: 1.3em;
+      line-height: 1.8em;
+      color: #fff;
+    }
+    /* Footer Styles */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video: Cyberpunk Night City -->
+  <video autoplay muted loop id="bg-video">
+    <source src="cyberpunk_city.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
+  
+  <header>
+    <h1>Los Santos</h1>
+  </header>
+  
+  <div class="container">
+    <section class="section" id="transportation">
+      <h2>Transportation</h2>
+      <p>Los Santos offers a highly efficient public transportation system powered by electric buses, bike-sharing, and autonomous cars. Smart traffic lights ensure smooth traffic flow and minimal congestion.</p>
+    </section>
+    <section class="section" id="energy-management">
+      <h2>Energy Management</h2>
+      <p>We use renewable energy sources such as solar and wind power to supply energy to the city. Smart grids ensure efficient distribution of energy while minimizing wastage.</p>
+    </section>
+    <section class="section" id="waste-management">
+      <h2>Waste Management</h2>
+      <p>The city utilizes an advanced waste management system that includes smart bins, automated sorting, and recycling facilities to minimize environmental impact.</p>
+    </section>
+    <section class="section" id="security">
+      <h2>Public Safety & Security</h2>
+      <p>Los Santos is equipped with smart surveillance, emergency response systems, and AI-powered law enforcement, ensuring the safety and security of every citizen.</p>
+    </section>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Los Santos | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
